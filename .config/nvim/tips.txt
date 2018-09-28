@@ -1,0 +1,42 @@
+# search and replace in vim across all the projects files
+* :grep <search term>
+* :cdo %s/<search term>/<replace term>/gc | update
+NOTE:  cdo cfdo
+
+# one time normal mode command when in insert mode
+'''
+ctrl+o <command>
+'''
+
+# count the number of a pattern matches
+:%~n
+
+# launch web browser with *gx* command
+gx
+
+# set infercase
+# when set ignorecase for searching , the keyword completion will not
+# play nicly, so just set infercase
+# TODO: need a demo to use this
+
+# improve performance for files with long lines
+# long lines will cause performance issue like syntax highlight.
+# when with long lines DO this:
+* set synmaxclo=200   # just syntax highlight the firest 200 characters of each line
+# toggle relativenumber when required
+
+# syntax reformat
+# :syntax  sync fromstart<CR>
+
+# write file as root
+:w !sudo tee % > /dev/null
+
+# display all current keymap
+:map
+:nmap
+:imap
+:vmap
+# write keymap to a file
+:redir! > kemap.log
+:silent verbose map
+:redir END

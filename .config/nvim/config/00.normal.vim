@@ -1,9 +1,10 @@
+" normal setting for all files
 " set nocompatible  "NVIM is always nocompatible
 set guicursor=   " to fix prompt 001b
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
-set expandtab
+set tabstop=8
+set softtabstop=8
+set shiftwidth=8
+" set expandtab
 set smarttab
 set autoindent
 set cindent
@@ -30,3 +31,10 @@ set clipboard+=unnamedplus " copy use system clipboard
 autocmd BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
 
 set tags=./.tags;,.tags
+set path+=./**
+
+" better wrap
+set breakindent
+set showbreak=\\\\\\
+
+" autocmd FileType c,cpp setlocal equalprg=indent
